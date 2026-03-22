@@ -20,365 +20,128 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--apple-bg);
     color: var(--apple-text);
-    margin-left: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
-.iphone-img {
-    width: 140px;
-    height: auto;
-    margin-bottom: 24px;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
-    transition: var(--transition-smooth);
-}
-
-.iphone-card:hover .iphone-img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
-}
-
-.sub-models {
-    font-size: 13px;
-    color: var(--apple-subtext);
-    margin-top: 12px;
-    font-weight: 400;
-}
-
-.detail-img-large {
-    width: 200px;
-    height: auto;
-    margin: 40px auto;
-    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.2));
-}
-
-/* Scroll Snap for Timeline */
-.timeline-container {
-    scroll-snap-type: x mandatory;
-    padding: 100px 0;
-}
-
-.iphone-card {
-    scroll-snap-align: center;
-}
-
-/* Navbar Styling */
+/* Navbar */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    height: 44px;
+    top: 0; width: 100%; height: 44px;
     background-color: var(--navbar-bg);
     backdrop-filter: saturate(180%) blur(20px);
     z-index: 1000;
-    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    border-bottom: 0.5px solid var(--glass-border);
 }
 
 .nav-content {
-    max-width: 1024px;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 22px;
+    max-width: 1024px; margin: 0 auto; height: 100%;
+    display: flex; justify-content: space-between; align-items: center; padding: 0 22px;
 }
 
-.logo {
-    font-size: 19px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
+.logo { font-size: 19px; font-weight: 500; }
+.theme-toggle { background: none; border: none; cursor: pointer; color: var(--apple-text); font-size: 12px; }
+
+/* Hero */
+.hero {
+    height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    background: radial-gradient(circle at center, var(--apple-bg) 0%, #f5f5f7 100%);
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--apple-text);
-    font-size: 12px;
-    margin-left: 20px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
+.hero-title { font-size: clamp(40px, 10vw, 80px); font-weight: 700; letter-spacing: -0.02em; }
+.hero-subtitle { font-size: clamp(18px, 3vw, 24px); color: var(--apple-subtext); margin-top: 10px; }
 
-.nav-links a:hover {
-    opacity: 1;
-}
-
-/* Responsive Layout & Visual Enhancements */
-.hero-title {
-    font-size: clamp(32px, 8vw, 56px);
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    margin-bottom: 12px;
-}
-
-.hero-subtitle {
-    font-size: clamp(18px, 4vw, 24px);
-    color: var(--apple-subtext);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.visual-placeholder {
-    width: 140px;
-    height: 200px;
-    border-radius: 20px;
-    margin-bottom: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: var(--transition-smooth);
-}
-
-.iphone-card:hover .visual-placeholder {
-    transform: scale(1.1);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
-
-.chipset-badge {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--apple-accent);
-    background: rgba(0, 113, 227, 0.1);
-    padding: 4px 12px;
-    border-radius: 100px;
-    margin-bottom: 16px;
-}
-
-.detail-chip {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--apple-subtext);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.detail-visual {
-    width: 220px;
-    height: 440px;
-    border-radius: 40px;
-    margin: 40px auto;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.2);
-}
-
-/* Responsive Overrides */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide links on mobile for cleaner look */
-    }
-
-    .timeline-track {
-        padding: 0 20px;
-        gap: 20px;
-    }
-
-    .iphone-card {
-        min-width: 280px;
-        height: 420px;
-        padding: 30px;
-    }
-
-    .detail-container h1 {
-        font-size: 48px;
-    }
-
-    .detail-desc {
-        font-size: 18px;
-    }
-}
-
-/* Animations for Detail View */
-.detail-container > * {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.overlay:not(.hidden) .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Scroll Indicator Animation */
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.6;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-/* Timeline Track */
+/* Vertical Timeline */
 .timeline-container {
-    padding: 100px 0;
-    min-height: 500px;
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
+    position: relative; max-width: 1200px; margin: 0 auto; padding: 100px 20px;
 }
 
-.timeline-container::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+.timeline-line {
+    position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--glass-border) 10%, var(--glass-border) 90%, transparent);
+    transform: translateX(-50%);
 }
 
-.timeline-track {
-    display: flex;
-    padding: 0 50px;
-    gap: 40px;
+.timeline-section {
+    position: relative; width: 50%; padding: 40px; margin-bottom: 80px;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* iPhone Cards - Glassmorphism */
-.iphone-card {
-    min-width: 320px;
-    height: 460px;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border-radius: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: var(--transition-smooth);
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.timeline-section.left { left: 0; text-align: right; }
+.timeline-section.right { left: 50%; text-align: left; }
+
+.timeline-dot {
+    position: absolute; left: 100%; top: 50px; width: 16px; height: 16px;
+    background: var(--apple-accent); border: 4px solid var(--apple-bg);
+    border-radius: 50%; transform: translateX(-50%); z-index: 10;
 }
 
-.iphone-card:hover {
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+.timeline-section.right .timeline-dot { left: 0; }
+
+.gen-year { font-size: 64px; font-weight: 800; color: var(--apple-accent); opacity: 0.2; line-height: 1; }
+.gen-header h2 { font-size: 32px; margin-bottom: 30px; }
+
+/* Grid Layout for Phones */
+.gen-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px;
 }
 
-.iphone-card h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
+.mini-card {
+    background: var(--glass-bg); backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border); padding: 20px; border-radius: 24px;
+    cursor: pointer; transition: var(--transition-smooth);
 }
 
-.iphone-card .year {
-    color: var(--apple-accent);
-    font-weight: 500;
-    margin-bottom: 24px;
-}
+.mini-card:hover { transform: translateY(-10px); border-color: var(--apple-accent); }
+.mini-card img { width: 100%; height: auto; margin-bottom: 15px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+.mini-card h3 { font-size: 14px; }
+.chip-label { font-size: 10px; color: var(--apple-subtext); text-transform: uppercase; }
 
-.iphone-card .features {
-    font-size: 14px;
-    color: var(--apple-subtext);
-    list-style: none;
-}
-
-/* Overlay / Detail View */
+/* Spec View Overlay */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--apple-bg);
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition-smooth);
-    overflow-y: auto;
-    padding: 80px 20px;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--apple-bg); z-index: 2000; overflow-y: auto;
+    display: flex; justify-content: center; transition: var(--transition-smooth);
 }
 
-.overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
+.overlay.hidden { opacity: 0; visibility: hidden; transform: translateY(100%); }
+.close-btn { position: fixed; top: 30px; right: 30px; font-size: 32px; border: none; background: none; cursor: pointer; color: var(--apple-subtext); z-index: 3000; }
+
+.spec-view { max-width: 1000px; width: 100%; padding: 80px 40px; }
+.spec-header { display: flex; align-items: center; gap: 80px; margin-bottom: 80px; }
+.spec-img { width: 300px; filter: drop-shadow(0 40px 80px rgba(0,0,0,0.15)); }
+.spec-titles h1 { font-size: clamp(40px, 8vw, 80px); line-height: 1; }
+.chip-name { font-size: 24px; color: var(--apple-accent); margin-top: 10px; }
+
+.spec-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 80px;
 }
 
-.close-btn {
-    position: fixed;
-    top: 40px;
-    right: 40px;
-    font-size: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--apple-subtext);
-    z-index: 3000;
-    transition: color 0.3s;
-}
+.spec-item { padding: 30px; background: #f5f5f7; border-radius: 20px; }
+[data-theme="dark"] .spec-item { background: #1c1c1e; }
+.spec-item strong { display: block; font-size: 12px; color: var(--apple-subtext); text-transform: uppercase; margin-bottom: 10px; }
+.spec-item span { font-size: 22px; font-weight: 600; }
 
-.close-btn:hover {
-    color: var(--apple-text);
-}
-
-.detail-container {
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
-
-.detail-container h1 {
-    font-size: 72px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
-}
-
-.detail-year {
-    font-size: 32px;
-    color: var(--apple-accent);
-    margin-bottom: 40px;
-}
-
-.detail-desc {
-    font-size: 24px;
-    color: var(--apple-text);
-    max-width: 600px;
-    margin: 40px auto;
-    line-height: 1.4;
-}
-
-.detail-highlights {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.highlight-pill {
-    padding: 12px 24px;
-    background-color: #f5f5f7;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--apple-text);
-}
+.evolution-section h3 { font-size: 28px; margin-bottom: 30px; }
+.change-list { list-style: none; display: grid; gap: 15px; }
+.change-list li { padding: 20px; border-radius: 15px; background: rgba(0,113,227,0.05); border-left: 4px solid var(--apple-accent); font-size: 18px; }
 
 /* Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+.fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; }
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Responsive */
+@media (max-width: 900px) {
+    .timeline-line { left: 30px; }
+    .timeline-section { width: 100%; left: 0 !important; padding-left: 80px; text-align: left !important; }
+    .timeline-dot { left: 30px !important; }
+    .spec-header { flex-direction: column; text-align: center; gap: 40px; }
+    .spec-img { width: 200px; }
 }
-
-.fade-in:nth-child(1) { animation-delay: 0.1s; }
-.fade-in:nth-child(2) { animation-delay: 0.2s; }
-.fade-in:nth-child(3) { animation-delay: 0.3s; }
-.fade-in:nth-child(4) { animation-delay: 0.4s; }
-.fade-in:nth-child(5) { animation-delay: 0.5s; }

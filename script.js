@@ -1,143 +1,210 @@
-const iphones = [
+const generations = [
     {
-        name: "iPhone",
         year: "2007",
-        chip: "Samsung S5L8900",
-        models: ["Original"],
-        description: "The revolution that combined a phone, an iPod, and an internet communicator.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP2/iphone_original-color.png"
+        title: "The Beginning",
+        iphones: [
+            {
+                name: "iPhone",
+                chip: "Samsung S5L8900",
+                ram: "128MB",
+                battery: "1400 mAh",
+                display: "3.5\" LCD",
+                predecessor: "N/A",
+                changes: ["First Multi-touch interface", "Desktop-class Safari"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP2/iphone_original-color.png"
+            }
+        ]
     },
     {
-        name: "iPhone 3G / 3GS",
-        year: "2008-2009",
-        chip: "S5L8900 / S5L8920",
-        models: ["3G", "3GS"],
-        description: "High-speed 3G and the debut of the App Store.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP495/iphone3gs.png"
+        year: "2010",
+        title: "Retina Revolution",
+        iphones: [
+            {
+                name: "iPhone 4",
+                chip: "Apple A4",
+                ram: "512MB",
+                battery: "1420 mAh",
+                display: "3.5\" Retina",
+                predecessor: "iPhone 3GS",
+                changes: ["960x640 Retina Display", "First Front Camera", "Glass Sandwich Design"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP587/iphone4-black.png"
+            }
+        ]
     },
     {
-        name: "iPhone 4 / 4S",
-        year: "2010-2011",
-        chip: "Apple A4 / A5",
-        models: ["4", "4S"],
-        description: "Retina Display and the introduction of Siri.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP643/sp643_iphone4s_color_black.png"
+        year: "2014",
+        title: "Bigger than Bigger",
+        iphones: [
+            {
+                name: "iPhone 6",
+                chip: "Apple A8",
+                ram: "1GB",
+                battery: "1810 mAh",
+                display: "4.7\" Retina HD",
+                predecessor: "iPhone 5s",
+                changes: ["Larger 4.7\" Display", "Apple Pay (NFC)", "Curved Design"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-gold.png"
+            },
+            {
+                name: "iPhone 6 Plus",
+                chip: "Apple A8",
+                ram: "1GB",
+                battery: "2915 mAh",
+                display: "5.5\" Retina HD",
+                predecessor: "iPhone 5s",
+                changes: ["First 'Plus' Model", "Optical Image Stabilization", "Full HD Display"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP706/iphone6-plus-gold.png"
+            }
+        ]
     },
     {
-        name: "iPhone 5 Series",
-        year: "2012-2013",
-        chip: "Apple A6 / A7",
-        models: ["5", "5s", "5c"],
-        description: "Lightning connector, Touch ID, and 64-bit architecture.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP685/sp685-iphone5s-silver.png"
+        year: "2017",
+        title: "The Future of Smart",
+        iphones: [
+            {
+                name: "iPhone X",
+                chip: "Apple A11 Bionic",
+                ram: "3GB",
+                battery: "2716 mAh",
+                display: "5.8\" Super Retina OLED",
+                predecessor: "iPhone 7",
+                changes: ["Face ID facial recognition", "All-Screen OLED Display", "No Home Button"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphone-x.png"
+            },
+            {
+                name: "iPhone 8",
+                chip: "Apple A11 Bionic",
+                ram: "2GB",
+                battery: "1821 mAh",
+                display: "4.7\" Retina HD",
+                predecessor: "iPhone 7",
+                changes: ["Glass Back Design", "Wireless Charging", "A11 Bionic Power"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP767/iphone8.png"
+            }
+        ]
     },
     {
-        name: "iPhone 6 Series",
-        year: "2014-2015",
-        chip: "Apple A8 / A9",
-        models: ["6", "6 Plus", "6s", "6s Plus"],
-        description: "The era of larger screens and the birth of Apple Pay.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-gold.png"
-    },
-    {
-        name: "iPhone 7 / 8 / X",
-        year: "2016-2017",
-        chip: "A10 / A11 Bionic",
-        models: ["7", "7 Plus", "8", "8 Plus", "X"],
-        description: "Edge-to-edge OLED and the future of authentication: Face ID.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphone-x.png"
-    },
-    {
-        name: "iPhone 11 Series",
-        year: "2019",
-        chip: "Apple A13 Bionic",
-        models: ["11", "11 Pro", "11 Pro Max"],
-        description: "Pro photography with a triple-camera system.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP804/iphone-11-pro.png"
-    },
-    {
-        name: "iPhone 12 Series",
         year: "2020",
-        chip: "Apple A14 Bionic",
-        models: ["12", "12 Mini", "12 Pro", "12 Pro Max"],
-        description: "The power of 5G meets MagSafe and Ceramic Shield.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP830/iphone-12-pro.png"
+        title: "Blast Past Fast",
+        iphones: [
+            {
+                name: "iPhone 12",
+                chip: "Apple A14 Bionic",
+                ram: "4GB",
+                battery: "2815 mAh",
+                display: "6.1\" Super Retina XDR",
+                predecessor: "iPhone 11",
+                changes: ["5G Connectivity", "MagSafe Charging", "Ceramic Shield"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP830/iphone-12-pro.png"
+            },
+            {
+                name: "iPhone 12 Mini",
+                chip: "Apple A14 Bionic",
+                ram: "4GB",
+                battery: "2227 mAh",
+                display: "5.4\" Super Retina XDR",
+                predecessor: "iPhone 11",
+                changes: ["Worlds Smallest 5G Phone", "Compact 5.4\" Display"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP829/iphone12mini-blue.png"
+            }
+        ]
     },
     {
-        name: "iPhone 13 Series",
-        year: "2021",
-        chip: "Apple A15 Bionic",
-        models: ["13", "13 Mini", "13 Pro", "13 Pro Max"],
-        description: "ProMotion displays and the best battery life yet.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP852/iphone-13-pro.png"
-    },
-    {
-        name: "iPhone 14 Series",
-        year: "2022",
-        chip: "A15 / A16 Bionic",
-        models: ["14", "14 Plus", "14 Pro", "14 Pro Max"],
-        description: "Dynamic Island and a new 48MP main sensor.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP876/iphone-14-pro.png"
-    },
-    {
-        name: "iPhone 15 Series",
-        year: "2023",
-        chip: "A16 / A17 Pro",
-        models: ["15", "15 Plus", "15 Pro", "15 Pro Max"],
-        description: "Titanium design and the universal convenience of USB-C.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP899/iphone-15-pro.png"
-    },
-    {
-        name: "iPhone 16 Series",
         year: "2024",
-        chip: "A18 / A18 Pro",
-        models: ["16", "16 Plus", "16 Pro", "16 Pro Max"],
-        description: "Built for Apple Intelligence. Introducing Camera Control.",
-        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP1005/iphone-16-pro.png"
+        title: "Apple Intelligence",
+        iphones: [
+            {
+                name: "iPhone 16 Pro Max",
+                chip: "Apple A18 Pro",
+                ram: "8GB",
+                battery: "4685 mAh",
+                display: "6.9\" Always-On OLED",
+                predecessor: "iPhone 15 Pro Max",
+                changes: ["Apple Intelligence Support", "New Camera Control Button", "Largest 6.9\" Screen"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP1005/iphone-16-pro.png"
+            },
+            {
+                name: "iPhone 16",
+                chip: "Apple A18",
+                ram: "8GB",
+                battery: "3561 mAh",
+                display: "6.1\" Super Retina XDR",
+                predecessor: "iPhone 15",
+                changes: ["Action Button on Base Models", "Camera Control Button", "Macro Photography"],
+                img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP1004/iphone-16.png"
+            }
+        ]
     }
 ];
 
-const track = document.getElementById('iphone-track');
-const themeBtn = document.getElementById('theme-btn');
+const container = document.getElementById('iphone-track');
 const overlay = document.getElementById('iphone-overlay');
 const detailView = document.getElementById('detail-view');
 const closeBtn = document.querySelector('.close-btn');
+// Render Vertical Timeline
+function renderVerticalTimeline() {
+    container.innerHTML = '<div class="timeline-line"></div>';
 
-// Theme Toggle Logic
-themeBtn.addEventListener('click', () => {
-    const current = document.body.getAttribute('data-theme');
-    const target = current === 'light' ? 'dark' : 'light';
-    document.body.setAttribute('data-theme', target);
-    themeBtn.textContent = target === 'light' ? 'Dark Mode' : 'Light Mode';
-});
-
-// Render Timeline
-function render() {
-    track.innerHTML = '';
-    iphones.forEach(phone => {
-        const card = document.createElement('div');
-        card.className = 'iphone-card fade-in';
-        card.innerHTML = `
-            <div class="year">${phone.year}</div>
-            <img src="${phone.img}" alt="${phone.name}" class="iphone-img">
-            <h2>${phone.name}</h2>
-            <div class="chipset-badge">${phone.chip}</div>
-            <div class="sub-models">${phone.models.join(' • ')}</div>
+    generations.forEach((gen, index) => {
+        const section = document.createElement('div');
+        section.className = `timeline-section ${index % 2 === 0 ? 'left' : 'right'}`;
+        section.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="gen-header">
+                <span class="gen-year">${gen.year}</span>
+                <h2>${gen.title}</h2>
+            </div>
+            <div class="gen-grid">
+                ${gen.iphones.map(phone => `
+                    <div class="mini-card fade-in" onclick='showDetail(${JSON.stringify(phone)})'>
+                        <img src="${phone.img}" alt="${phone.name}">
+                        <h3>${phone.name}</h3>
+                        <span class="chip-label">${phone.chip}</span>
+                    </div>
+                `).join('')}
+            </div>
         `;
-        card.onclick = () => showDetail(phone);
-        track.appendChild(card);
+        container.appendChild(section);
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.timeline-section').forEach(section => {
+        observer.observe(section);
     });
 }
 
+
 function showDetail(phone) {
     detailView.innerHTML = `
-        <div class="detail-container">
-            <h1 class="fade-in">${phone.name}</h1>
-            <img src="${phone.img}" alt="${phone.name}" class="detail-img-large fade-in">
-            <p class="detail-chip fade-in">${phone.chip}</p>
-            <p class="detail-desc fade-in">${phone.description}</p>
-            <div class="detail-highlights fade-in">
-                ${phone.models.map(m => `<div class="highlight-pill">${m}</div>`).join('')}
+        <div class="spec-view fade-in">
+            <div class="spec-header">
+                <img src="${phone.img}" class="spec-img">
+                <div class="spec-titles">
+                    <h1>${phone.name}</h1>
+                    <p class="chip-name">${phone.chip}</p>
+                </div>
+            </div>
+            
+            <div class="spec-grid">
+                <div class="spec-item"><strong>RAM</strong><span>${phone.ram}</span></div>
+                <div class="spec-item"><strong>Battery</strong><span>${phone.battery}</span></div>
+                <div class="spec-item"><strong>Display</strong><span>${phone.display}</span></div>
+                <div class="spec-item"><strong>Predecessor</strong><span>${phone.predecessor}</span></div>
+            </div>
+
+            <div class="evolution-section">
+                <h3>What's New?</h3>
+                <ul class="change-list">
+                    ${phone.changes.map(c => `<li>${c}</li>`).join('')}
+                </ul>
             </div>
         </div>
     `;
@@ -150,4 +217,4 @@ closeBtn.onclick = () => {
     document.body.style.overflow = 'auto';
 };
 
-render();
+renderVerticalTimeline();
