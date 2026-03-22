@@ -18,7 +18,7 @@ const iphones = [
     {
         name: "iPhone 3GS",
         year: "2009",
-        chip: "Samsung S5PC100",
+        chip: "Samsung S5L8920",
         features: ["Video Recording", "Voice Control", "3MP Camera"],
         description: "The 'S' stood for speed, with a vastly improved processor.",
         color: "linear-gradient(135deg, #fff 0%, #d1d1d6 100%)"
@@ -50,21 +50,29 @@ const iphones = [
     {
         name: "iPhone 5s",
         year: "2013",
-        chip: "Apple A7 (64-bit)",
-        features: ["Touch ID", "M7 Coprocessor", "64-bit Architecture"],
+        chip: "Apple A7",
+        features: ["Touch ID", "64-bit Architecture", "True Tone Flash"],
         description: "The world's first 64-bit smartphone and the debut of Touch ID.",
         color: "linear-gradient(135deg, #d4af37 0%, #c5a028 100%)"
+    },
+    {
+        name: "iPhone 5c",
+        year: "2013",
+        chip: "Apple A6",
+        features: ["Color Cases", "4\" Display", "iOS 7"],
+        description: "For the colorful. A bright new take on the iPhone 5 architecture.",
+        color: "linear-gradient(135deg, #5fc9f8 0%, #44a1e0 100%)"
     },
     {
         name: "iPhone 6 / 6 Plus",
         year: "2014",
         chip: "Apple A8",
-        features: ["Retina HD", "Apple Pay", "Large Displays"],
+        features: ["Retina HD", "Apple Pay", "NFC"],
         description: "Bigger than bigger. A massive shift in screen size and the birth of Apple Pay.",
         color: "linear-gradient(135deg, #b4b4b4 0%, #8e8e93 100%)"
     },
     {
-        name: "iPhone 6s",
+        name: "iPhone 6s / 6s Plus",
         year: "2015",
         chip: "Apple A9",
         features: ["3D Touch", "12MP Camera", "4K Video"],
@@ -72,12 +80,28 @@ const iphones = [
         color: "linear-gradient(135deg, #e6c7c2 0%, #d4a59e 100%)"
     },
     {
-        name: "iPhone 7",
+        name: "iPhone SE (1st gen)",
+        year: "2016",
+        chip: "Apple A9",
+        features: ["4\" Design", "A9 Power", "12MP Camera"],
+        description: "A big step for small. The beloved 4-inch design with modern power.",
+        color: "linear-gradient(135deg, #e3e4e5 0%, #d1d1d6 100%)"
+    },
+    {
+        name: "iPhone 7 / 7 Plus",
         year: "2016",
         chip: "Apple A10 Fusion",
-        features: ["Water Resistance", "Haptic Engine", "No Jack"],
-        description: "A more immersive experience with water resistance and a new haptic Home button.",
+        features: ["Water Resistance", "Dual Camera (Plus)", "No Jack"],
+        description: "A more immersive experience with water resistance and enhanced cameras.",
         color: "linear-gradient(135deg, #222 0%, #000 100%)"
+    },
+    {
+        name: "iPhone 8 / 8 Plus",
+        year: "2017",
+        chip: "Apple A11 Bionic",
+        features: ["Glass Back", "Wireless Charging", "True Tone"],
+        description: "A new generation of iPhone with an all-glass design and A11 Bionic chip.",
+        color: "linear-gradient(135deg, #f9f6f2 0%, #e1dad1 100%)"
     },
     {
         name: "iPhone X",
@@ -88,52 +112,92 @@ const iphones = [
         color: "linear-gradient(135deg, #fff 0%, #ebebeb 100%)"
     },
     {
-        name: "iPhone 11 Pro",
+        name: "iPhone XS / XS Max",
+        year: "2018",
+        chip: "Apple A12 Bionic",
+        features: ["Super Retina XDR", "Smart HDR", "A12 Bionic"],
+        description: "Welcome to the big screens. Advanced HDR and a faster-than-ever chip.",
+        color: "linear-gradient(135deg, #d4af37 0%, #c5a028 100%)"
+    },
+    {
+        name: "iPhone XR",
+        year: "2018",
+        chip: "Apple A12 Bionic",
+        features: ["Liquid Retina", "Single Lens Portrait", "Color Range"],
+        description: "Brilliant. In every way. A colorful, all-screen design with incredible battery life.",
+        color: "linear-gradient(135deg, #ff3b30 0%, #d70015 100%)"
+    },
+    {
+        name: "iPhone 11 Series",
         year: "2019",
         chip: "Apple A13 Bionic",
-        features: ["Triple-Camera", "Night Mode", "Super Retina XDR"],
-        description: "The first 'Pro' iPhone, with a triple-camera system for professional photography.",
+        features: ["Night Mode", "Ultra Wide", "Slofies"],
+        description: "Just the right amount of everything. Advanced cameras and all-day battery life.",
         color: "linear-gradient(135deg, #4b533a 0%, #2c3122 100%)"
     },
     {
-        name: "iPhone 12 Pro",
+        name: "iPhone SE (2nd gen)",
+        year: "2020",
+        chip: "Apple A13 Bionic",
+        features: ["A13 Bionic", "Touch ID", "Compact Design"],
+        description: "Lots to love. Less to spend. The powerful A13 chip in a familiar design.",
+        color: "linear-gradient(135deg, #000 0%, #333 100%)"
+    },
+    {
+        name: "iPhone 12 Series",
         year: "2020",
         chip: "Apple A14 Bionic",
-        features: ["5G", "LiDAR Scanner", "Ceramic Shield"],
-        description: "The first iPhone with 5G and the power of the LiDAR scanner for AR.",
+        features: ["5G", "MagSafe", "Ceramic Shield"],
+        description: "Blast past fast. The first iPhone with 5G and MagSafe integration.",
         color: "linear-gradient(135deg, #2c445a 0%, #1a2936 100%)"
     },
     {
-        name: "iPhone 13 Pro",
+        name: "iPhone 13 Series",
         year: "2021",
         chip: "Apple A15 Bionic",
-        features: ["ProMotion 120Hz", "Cinematic Mode", "Macro"],
-        description: "Unprecedented graphics performance and the cinematic way to shoot video.",
+        features: ["ProMotion 120Hz", "Cinematic Mode", "Small Notch"],
+        description: "Your new superpower. Cinematic mode and the best battery life yet.",
         color: "linear-gradient(135deg, #a7c1d1 0%, #83a1b3 100%)"
     },
     {
-        name: "iPhone 14 Pro",
+        name: "iPhone SE (3rd gen)",
         year: "2022",
-        chip: "Apple A16 Bionic",
-        features: ["Dynamic Island", "48MP Camera", "Always-On"],
-        description: "The magic of Dynamic Island and the first 48MP sensor on an iPhone.",
+        chip: "Apple A15 Bionic",
+        features: ["5G", "A15 Bionic", "Classic Design"],
+        description: "Love the power. Love the price. 5G comes to the most affordable iPhone.",
+        color: "linear-gradient(135deg, #fff 0%, #f5f5f7 100%)"
+    },
+    {
+        name: "iPhone 14 Series",
+        year: "2022",
+        chip: "A15 / A16 Bionic",
+        features: ["Dynamic Island", "48MP Camera", "Satellite SOS"],
+        description: "A magical new way to interact with iPhone. Pro cameras and safety features.",
         color: "linear-gradient(135deg, #594f63 0%, #3e3745 100%)"
     },
     {
-        name: "iPhone 15 Pro",
+        name: "iPhone 15 Series",
         year: "2023",
-        chip: "Apple A17 Pro",
+        chip: "A16 / A17 Pro",
         features: ["Titanium", "USB-C", "Action Button"],
-        description: "A titanium frame makes this the lightest Pro model ever.",
+        description: "Stronger. Lighter. Pro. A titanium frame and the first USB-C iPhone.",
         color: "linear-gradient(135deg, #b7b4ad 0%, #8e8c87 100%)"
     },
     {
-        name: "iPhone 16 Pro",
+        name: "iPhone 16 Series",
         year: "2024",
-        chip: "Apple A18 Pro",
-        features: ["Camera Control", "Apple Intelligence", "4K 120Hz"],
-        description: "Built from the ground up for Apple Intelligence and pro-level creators.",
+        chip: "A18 / A18 Pro",
+        features: ["Camera Control", "Apple Intelligence", "A18 Pro"],
+        description: "Built for Apple Intelligence. A revolutionary new Camera Control button.",
         color: "linear-gradient(135deg, #3c3c3e 0%, #1d1d1f 100%)"
+    },
+    {
+        name: "iPhone 17 Series",
+        year: "2025",
+        chip: "A19 / A19 Pro",
+        features: ["iPhone Air", "A19 Pro", "24MP Front Cam"],
+        description: "Introducing iPhone Air. The next leap in performance and thin design.",
+        color: "linear-gradient(135deg, #gold 0%, #d4af37 100%)"
     }
 ];
 
