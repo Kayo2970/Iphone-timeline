@@ -66,30 +66,99 @@ body {
     opacity: 1;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(180deg, #fff 0%, #f5f5f7 100%);
-    padding: 20px;
-}
-
+/* Responsive Layout & Visual Enhancements */
 .hero-title {
-    font-size: 56px;
+    font-size: clamp(32px, 8vw, 56px);
     font-weight: 600;
     letter-spacing: -0.015em;
     margin-bottom: 12px;
 }
 
 .hero-subtitle {
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px);
     color: var(--apple-subtext);
     max-width: 600px;
     margin: 0 auto;
+}
+
+.visual-placeholder {
+    width: 140px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: var(--transition-smooth);
+}
+
+.iphone-card:hover .visual-placeholder {
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.chipset-badge {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--apple-accent);
+    background: rgba(0, 113, 227, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+.detail-chip {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--apple-subtext);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-visual {
+    width: 220px;
+    height: 440px;
+    border-radius: 40px;
+    margin: 40px auto;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.2);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on mobile for cleaner look */
+    }
+
+    .timeline-track {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .iphone-card {
+        min-width: 280px;
+        height: 420px;
+        padding: 30px;
+    }
+
+    .detail-container h1 {
+        font-size: 48px;
+    }
+
+    .detail-desc {
+        font-size: 18px;
+    }
+}
+
+/* Animations for Detail View */
+.detail-container > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.overlay:not(.hidden) .fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Scroll Indicator Animation */
