@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Timeline | Apple-Inspired</title>
+    <title>iPhone Evolution | Apple-Inspired</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-theme="light">
     <nav class="navbar">
         <div class="nav-content">
             <span class="logo">iPhone Timeline</span>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#timeline">Explore</a>
-                <a href="#about">About</a>
+                <a href="#timeline">Timeline</a>
+                <button id="theme-btn" class="theme-toggle">Dark Mode</button>
             </div>
         </div>
     </nav>
@@ -24,25 +24,23 @@
     <main id="home">
         <section class="hero">
             <h1 class="hero-title">Experience the Evolution.</h1>
-            <p class="hero-subtitle">From the first touch to the next generation.</p>
+            <p class="hero-subtitle">Every generation. Every innovation.</p>
             <div class="scroll-indicator">
-                <span>Scroll to Explore</span>
+                <span>Explore the Journey</span>
                 <div class="arrow-down"></div>
             </div>
         </section>
 
         <section id="timeline" class="timeline-container">
             <div class="timeline-track" id="iphone-track">
-                <!-- iPhone Cards will be injected here by script.js -->
+                <!-- Cards injected here -->
             </div>
         </section>
     </main>
 
     <div id="iphone-overlay" class="overlay hidden">
         <button class="close-btn">&times;</button>
-        <div class="overlay-content" id="detail-view">
-            <!-- Detailed info injected here -->
-        </div>
+        <div class="overlay-content" id="detail-view"></div>
     </div>
 
     <script src="script.js"></script>

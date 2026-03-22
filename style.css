@@ -4,25 +4,68 @@
     --apple-subtext: #86868b;
     --apple-accent: #0071e3;
     --navbar-bg: rgba(255, 255, 255, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-bg: rgba(245, 245, 247, 0.4);
+    --glass-border: rgba(0, 0, 0, 0.1);
     --glass-blur: blur(20px);
     --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+[data-theme="dark"] {
+    --apple-bg: #000000;
+    --apple-text: #f5f5f7;
+    --apple-subtext: #a1a1a6;
+    --apple-accent: #2997ff;
+    --navbar-bg: rgba(0, 0, 0, 0.8);
+    --glass-bg: rgba(29, 29, 31, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: var(--apple-bg);
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--apple-text);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    margin-left: 20px;
+}
+
+.iphone-img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    transition: var(--transition-smooth);
+}
+
+.iphone-card:hover .iphone-img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+}
+
+.sub-models {
+    font-size: 13px;
+    color: var(--apple-subtext);
+    margin-top: 12px;
+    font-weight: 400;
+}
+
+.detail-img-large {
+    width: 200px;
+    height: auto;
+    margin: 40px auto;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.2));
+}
+
+/* Scroll Snap for Timeline */
+.timeline-container {
+    scroll-snap-type: x mandatory;
+    padding: 100px 0;
+}
+
+.iphone-card {
+    scroll-snap-align: center;
 }
 
 /* Navbar Styling */

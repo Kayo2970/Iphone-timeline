@@ -3,260 +3,151 @@ const iphones = [
         name: "iPhone",
         year: "2007",
         chip: "Samsung S5L8900",
-        features: ["Multi-Touch", "3.5\" Display", "Safari"],
-        description: "The original revolutionary device that started it all.",
-        color: "linear-gradient(135deg, #8e8e93 0%, #1d1d1f 100%)"
+        models: ["Original"],
+        description: "The revolution that combined a phone, an iPod, and an internet communicator.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP2/iphone_original-color.png"
     },
     {
-        name: "iPhone 3G",
-        year: "2008",
-        chip: "Samsung S5L8900",
-        features: ["App Store", "3G Data", "GPS"],
-        description: "Bringing high-speed connectivity and the App Store to the world.",
-        color: "linear-gradient(135deg, #000 0%, #333 100%)"
+        name: "iPhone 3G / 3GS",
+        year: "2008-2009",
+        chip: "S5L8900 / S5L8920",
+        models: ["3G", "3GS"],
+        description: "High-speed 3G and the debut of the App Store.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP495/iphone3gs.png"
     },
     {
-        name: "iPhone 3GS",
-        year: "2009",
-        chip: "Samsung S5L8920",
-        features: ["Video Recording", "Voice Control", "3MP Camera"],
-        description: "The 'S' stood for speed, with a vastly improved processor.",
-        color: "linear-gradient(135deg, #fff 0%, #d1d1d6 100%)"
+        name: "iPhone 4 / 4S",
+        year: "2010-2011",
+        chip: "Apple A4 / A5",
+        models: ["4", "4S"],
+        description: "Retina Display and the introduction of Siri.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP643/sp643_iphone4s_color_black.png"
     },
     {
-        name: "iPhone 4",
-        year: "2010",
-        chip: "Apple A4",
-        features: ["Retina Display", "FaceTime", "Glass Design"],
-        description: "A monumental leap in display density and a stunning industrial design.",
-        color: "linear-gradient(135deg, #1d1d1f 0%, #444 100%)"
+        name: "iPhone 5 Series",
+        year: "2012-2013",
+        chip: "Apple A6 / A7",
+        models: ["5", "5s", "5c"],
+        description: "Lightning connector, Touch ID, and 64-bit architecture.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP685/sp685-iphone5s-silver.png"
     },
     {
-        name: "iPhone 4S",
-        year: "2011",
-        chip: "Apple A5",
-        features: ["Siri", "Dual-core A5", "8MP Camera"],
-        description: "The introduction of Siri, the personal assistant that changed interaction.",
-        color: "linear-gradient(135deg, #f5f5f7 0%, #8e8e93 100%)"
+        name: "iPhone 6 Series",
+        year: "2014-2015",
+        chip: "Apple A8 / A9",
+        models: ["6", "6 Plus", "6s", "6s Plus"],
+        description: "The era of larger screens and the birth of Apple Pay.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-gold.png"
     },
     {
-        name: "iPhone 5",
-        year: "2012",
-        chip: "Apple A6",
-        features: ["Lightning Port", "4\" Display", "LTE"],
-        description: "The first iPhone with a taller screen and the ultra-durable Lightning connector.",
-        color: "linear-gradient(135deg, #3a3a3c 0%, #1d1d1f 100%)"
-    },
-    {
-        name: "iPhone 5s",
-        year: "2013",
-        chip: "Apple A7",
-        features: ["Touch ID", "64-bit Architecture", "True Tone Flash"],
-        description: "The world's first 64-bit smartphone and the debut of Touch ID.",
-        color: "linear-gradient(135deg, #d4af37 0%, #c5a028 100%)"
-    },
-    {
-        name: "iPhone 5c",
-        year: "2013",
-        chip: "Apple A6",
-        features: ["Color Cases", "4\" Display", "iOS 7"],
-        description: "For the colorful. A bright new take on the iPhone 5 architecture.",
-        color: "linear-gradient(135deg, #5fc9f8 0%, #44a1e0 100%)"
-    },
-    {
-        name: "iPhone 6 / 6 Plus",
-        year: "2014",
-        chip: "Apple A8",
-        features: ["Retina HD", "Apple Pay", "NFC"],
-        description: "Bigger than bigger. A massive shift in screen size and the birth of Apple Pay.",
-        color: "linear-gradient(135deg, #b4b4b4 0%, #8e8e93 100%)"
-    },
-    {
-        name: "iPhone 6s / 6s Plus",
-        year: "2015",
-        chip: "Apple A9",
-        features: ["3D Touch", "12MP Camera", "4K Video"],
-        description: "Introduced 3D Touch and Live Photos for a more interactive experience.",
-        color: "linear-gradient(135deg, #e6c7c2 0%, #d4a59e 100%)"
-    },
-    {
-        name: "iPhone SE (1st gen)",
-        year: "2016",
-        chip: "Apple A9",
-        features: ["4\" Design", "A9 Power", "12MP Camera"],
-        description: "A big step for small. The beloved 4-inch design with modern power.",
-        color: "linear-gradient(135deg, #e3e4e5 0%, #d1d1d6 100%)"
-    },
-    {
-        name: "iPhone 7 / 7 Plus",
-        year: "2016",
-        chip: "Apple A10 Fusion",
-        features: ["Water Resistance", "Dual Camera (Plus)", "No Jack"],
-        description: "A more immersive experience with water resistance and enhanced cameras.",
-        color: "linear-gradient(135deg, #222 0%, #000 100%)"
-    },
-    {
-        name: "iPhone 8 / 8 Plus",
-        year: "2017",
-        chip: "Apple A11 Bionic",
-        features: ["Glass Back", "Wireless Charging", "True Tone"],
-        description: "A new generation of iPhone with an all-glass design and A11 Bionic chip.",
-        color: "linear-gradient(135deg, #f9f6f2 0%, #e1dad1 100%)"
-    },
-    {
-        name: "iPhone X",
-        year: "2017",
-        chip: "Apple A11 Bionic",
-        features: ["Face ID", "OLED All-Screen", "Animoji"],
-        description: "Say hello to the future. An edge-to-edge OLED display and Face ID security.",
-        color: "linear-gradient(135deg, #fff 0%, #ebebeb 100%)"
-    },
-    {
-        name: "iPhone XS / XS Max",
-        year: "2018",
-        chip: "Apple A12 Bionic",
-        features: ["Super Retina XDR", "Smart HDR", "A12 Bionic"],
-        description: "Welcome to the big screens. Advanced HDR and a faster-than-ever chip.",
-        color: "linear-gradient(135deg, #d4af37 0%, #c5a028 100%)"
-    },
-    {
-        name: "iPhone XR",
-        year: "2018",
-        chip: "Apple A12 Bionic",
-        features: ["Liquid Retina", "Single Lens Portrait", "Color Range"],
-        description: "Brilliant. In every way. A colorful, all-screen design with incredible battery life.",
-        color: "linear-gradient(135deg, #ff3b30 0%, #d70015 100%)"
+        name: "iPhone 7 / 8 / X",
+        year: "2016-2017",
+        chip: "A10 / A11 Bionic",
+        models: ["7", "7 Plus", "8", "8 Plus", "X"],
+        description: "Edge-to-edge OLED and the future of authentication: Face ID.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphone-x.png"
     },
     {
         name: "iPhone 11 Series",
         year: "2019",
         chip: "Apple A13 Bionic",
-        features: ["Night Mode", "Ultra Wide", "Slofies"],
-        description: "Just the right amount of everything. Advanced cameras and all-day battery life.",
-        color: "linear-gradient(135deg, #4b533a 0%, #2c3122 100%)"
-    },
-    {
-        name: "iPhone SE (2nd gen)",
-        year: "2020",
-        chip: "Apple A13 Bionic",
-        features: ["A13 Bionic", "Touch ID", "Compact Design"],
-        description: "Lots to love. Less to spend. The powerful A13 chip in a familiar design.",
-        color: "linear-gradient(135deg, #000 0%, #333 100%)"
+        models: ["11", "11 Pro", "11 Pro Max"],
+        description: "Pro photography with a triple-camera system.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP804/iphone-11-pro.png"
     },
     {
         name: "iPhone 12 Series",
         year: "2020",
         chip: "Apple A14 Bionic",
-        features: ["5G", "MagSafe", "Ceramic Shield"],
-        description: "Blast past fast. The first iPhone with 5G and MagSafe integration.",
-        color: "linear-gradient(135deg, #2c445a 0%, #1a2936 100%)"
+        models: ["12", "12 Mini", "12 Pro", "12 Pro Max"],
+        description: "The power of 5G meets MagSafe and Ceramic Shield.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP830/iphone-12-pro.png"
     },
     {
         name: "iPhone 13 Series",
         year: "2021",
         chip: "Apple A15 Bionic",
-        features: ["ProMotion 120Hz", "Cinematic Mode", "Small Notch"],
-        description: "Your new superpower. Cinematic mode and the best battery life yet.",
-        color: "linear-gradient(135deg, #a7c1d1 0%, #83a1b3 100%)"
-    },
-    {
-        name: "iPhone SE (3rd gen)",
-        year: "2022",
-        chip: "Apple A15 Bionic",
-        features: ["5G", "A15 Bionic", "Classic Design"],
-        description: "Love the power. Love the price. 5G comes to the most affordable iPhone.",
-        color: "linear-gradient(135deg, #fff 0%, #f5f5f7 100%)"
+        models: ["13", "13 Mini", "13 Pro", "13 Pro Max"],
+        description: "ProMotion displays and the best battery life yet.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP852/iphone-13-pro.png"
     },
     {
         name: "iPhone 14 Series",
         year: "2022",
         chip: "A15 / A16 Bionic",
-        features: ["Dynamic Island", "48MP Camera", "Satellite SOS"],
-        description: "A magical new way to interact with iPhone. Pro cameras and safety features.",
-        color: "linear-gradient(135deg, #594f63 0%, #3e3745 100%)"
+        models: ["14", "14 Plus", "14 Pro", "14 Pro Max"],
+        description: "Dynamic Island and a new 48MP main sensor.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP876/iphone-14-pro.png"
     },
     {
         name: "iPhone 15 Series",
         year: "2023",
         chip: "A16 / A17 Pro",
-        features: ["Titanium", "USB-C", "Action Button"],
-        description: "Stronger. Lighter. Pro. A titanium frame and the first USB-C iPhone.",
-        color: "linear-gradient(135deg, #b7b4ad 0%, #8e8c87 100%)"
+        models: ["15", "15 Plus", "15 Pro", "15 Pro Max"],
+        description: "Titanium design and the universal convenience of USB-C.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP899/iphone-15-pro.png"
     },
     {
         name: "iPhone 16 Series",
         year: "2024",
         chip: "A18 / A18 Pro",
-        features: ["Camera Control", "Apple Intelligence", "A18 Pro"],
-        description: "Built for Apple Intelligence. A revolutionary new Camera Control button.",
-        color: "linear-gradient(135deg, #3c3c3e 0%, #1d1d1f 100%)"
-    },
-    {
-        name: "iPhone 17 Series",
-        year: "2025",
-        chip: "A19 / A19 Pro",
-        features: ["iPhone Air", "A19 Pro", "24MP Front Cam"],
-        description: "Introducing iPhone Air. The next leap in performance and thin design.",
-        color: "linear-gradient(135deg, #gold 0%, #d4af37 100%)"
+        models: ["16", "16 Plus", "16 Pro", "16 Pro Max"],
+        description: "Built for Apple Intelligence. Introducing Camera Control.",
+        img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP1005/iphone-16-pro.png"
     }
 ];
 
 const track = document.getElementById('iphone-track');
+const themeBtn = document.getElementById('theme-btn');
 const overlay = document.getElementById('iphone-overlay');
 const detailView = document.getElementById('detail-view');
 const closeBtn = document.querySelector('.close-btn');
 
-function renderTimeline() {
+// Theme Toggle Logic
+themeBtn.addEventListener('click', () => {
+    const current = document.body.getAttribute('data-theme');
+    const target = current === 'light' ? 'dark' : 'light';
+    document.body.setAttribute('data-theme', target);
+    themeBtn.textContent = target === 'light' ? 'Dark Mode' : 'Light Mode';
+});
+
+// Render Timeline
+function render() {
     track.innerHTML = '';
-    iphones.forEach((iphone) => {
+    iphones.forEach(phone => {
         const card = document.createElement('div');
-        card.className = 'iphone-card';
+        card.className = 'iphone-card fade-in';
         card.innerHTML = `
-            <div class="year">${iphone.year}</div>
-            <div class="visual-placeholder" style="background: ${iphone.color};"></div>
-            <h2>${iphone.name}</h2>
-            <div class="chipset-badge">${iphone.chip}</div>
-            <ul class="features">
-                ${iphone.features.map(f => `<li>${f}</li>`).join('')}
-            </ul>
+            <div class="year">${phone.year}</div>
+            <img src="${phone.img}" alt="${phone.name}" class="iphone-img">
+            <h2>${phone.name}</h2>
+            <div class="chipset-badge">${phone.chip}</div>
+            <div class="sub-models">${phone.models.join(' • ')}</div>
         `;
-        
-        card.addEventListener('click', () => showDetail(iphone));
+        card.onclick = () => showDetail(phone);
         track.appendChild(card);
     });
 }
 
-function showDetail(iphone) {
+function showDetail(phone) {
     detailView.innerHTML = `
         <div class="detail-container">
-            <h1 class="fade-in">${iphone.name}</h1>
-            <p class="detail-year fade-in">${iphone.year}</p>
-            <div class="detail-chip fade-in">Powered by ${iphone.chip}</div>
-            <div class="detail-visual fade-in" style="background: ${iphone.color};"></div>
-            <p class="detail-desc fade-in">${iphone.description}</p>
+            <h1 class="fade-in">${phone.name}</h1>
+            <img src="${phone.img}" alt="${phone.name}" class="detail-img-large fade-in">
+            <p class="detail-chip fade-in">${phone.chip}</p>
+            <p class="detail-desc fade-in">${phone.description}</p>
             <div class="detail-highlights fade-in">
-                ${iphone.features.map(f => `<div class="highlight-pill">${f}</div>`).join('')}
+                ${phone.models.map(m => `<div class="highlight-pill">${m}</div>`).join('')}
             </div>
         </div>
     `;
-    
     overlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 }
 
-closeBtn.addEventListener('click', () => {
+closeBtn.onclick = () => {
     overlay.classList.add('hidden');
     document.body.style.overflow = 'auto';
-});
+};
 
-renderTimeline();
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
+render();
