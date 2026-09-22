@@ -1,0 +1,10 @@
+{
+  "name": "iphone-timeline",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy . --project-name=iphone-timeline"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
